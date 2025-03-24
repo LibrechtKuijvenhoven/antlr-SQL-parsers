@@ -2,11 +2,7 @@
 
 package parser // PostgreSQLParser
 
-import (
-	"fmt"
-
-	"github.com/antlr4-go/antlr/v4"
-)
+import "github.com/antlr4-go/antlr/v4"
 
 // BasePostgreSQLParserListener is a complete listener for a parse tree produced by PostgreSQLParser.
 type BasePostgreSQLParserListener struct{}
@@ -26,7 +22,7 @@ func (s *BasePostgreSQLParserListener) EnterEveryRule(ctx antlr.ParserRuleContex
 func (s *BasePostgreSQLParserListener) ExitEveryRule(ctx antlr.ParserRuleContext) {}
 
 // EnterRoot is called when production root is entered.
-func (s *BasePostgreSQLParserListener) EnterRoot(ctx *RootContext) {fmt.Printf("base root")}
+func (s *BasePostgreSQLParserListener) EnterRoot(ctx *RootContext) {}
 
 // ExitRoot is called when production root is exited.
 func (s *BasePostgreSQLParserListener) ExitRoot(ctx *RootContext) {}
