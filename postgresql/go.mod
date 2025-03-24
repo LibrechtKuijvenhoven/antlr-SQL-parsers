@@ -1,4 +1,4 @@
-module github.com/LibrechtKuijvenhoven/antlr-SQL-parsers/postgresql
+module github.com/LibrechtKuijvenhoven/antlr-SQL-parsers/postgresqlparser
 
 go 1.24.0
 
