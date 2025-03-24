@@ -1,3 +1,3 @@
-package parser
+package postgresqlparser
 
 //go:generate ./generate.sh

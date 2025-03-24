@@ -1,7 +1,6 @@
 // Code generated from PostgreSQLParser.g4 by ANTLR 4.13.0. DO NOT EDIT.
 
-package parser // PostgreSQLParser
-
+package postgresqlparser // PostgreSQLParser
 import "github.com/antlr4-go/antlr/v4"
 
 // PostgreSQLParserListener is a complete listener for a parse tree produced by PostgreSQLParser.

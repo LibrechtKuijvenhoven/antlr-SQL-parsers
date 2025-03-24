@@ -1,6 +1,6 @@
 // Code generated from PostgreSQLLexer.g4 by ANTLR 4.13.0. DO NOT EDIT.
 
-package parser
+package postgresqlparser
 
 import (
 	"fmt"
