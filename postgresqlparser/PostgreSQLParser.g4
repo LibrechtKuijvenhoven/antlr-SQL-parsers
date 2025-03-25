@@ -4745,7 +4745,7 @@ unreserved_keyword
     | TEMP
     | TEMPLATE
     | TEMPORARY
-    | TEXT_P
+   // | TEXT_P
     | TIES
     | TRANSACTION
     | TRANSFORM
@@ -4865,6 +4865,7 @@ col_name_keyword
     | BIGSERIAL
     | MONEY
     | UUID 
+    | TEXT_P
     ;
 
 /* Type/function identifier --- keywords that can be type or function names.
