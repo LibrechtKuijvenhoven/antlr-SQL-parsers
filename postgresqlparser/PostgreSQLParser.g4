@@ -4865,6 +4865,7 @@ col_name_keyword
     | BIGSERIAL
     | MONEY
     | UUID 
+    | TEXT_P
     ;
 
 /* Type/function identifier --- keywords that can be type or function names.
