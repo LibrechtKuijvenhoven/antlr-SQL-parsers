@@ -1203,6 +1203,15 @@ OPEN: 'OPEN';
 FORMAT: 'FORMAT';
 
 
+// updates for more recent versions of postgreSQL
+
+SMALLSERIAL: 'SMALLSERIAL';
+SERIAL: 'SERIAL';
+BIGSERIAL: 'BIGSERIAL';
+
+MONEY: 'MONEY';
+
+UUID: 'UUID';
 
 
 

@@ -3570,6 +3570,18 @@ func (s *BasePostgreSQLParserListener) EnterNumeric(ctx *NumericContext) {}
 // ExitNumeric is called when production numeric is exited.
 func (s *BasePostgreSQLParserListener) ExitNumeric(ctx *NumericContext) {}
 
+// EnterMoney is called when production money is entered.
+func (s *BasePostgreSQLParserListener) EnterMoney(ctx *MoneyContext) {}
+
+// ExitMoney is called when production money is exited.
+func (s *BasePostgreSQLParserListener) ExitMoney(ctx *MoneyContext) {}
+
+// EnterId is called when production id is entered.
+func (s *BasePostgreSQLParserListener) EnterId(ctx *IdContext) {}
+
+// ExitId is called when production id is exited.
+func (s *BasePostgreSQLParserListener) ExitId(ctx *IdContext) {}
+
 // EnterFloat_ is called when production float_ is entered.
 func (s *BasePostgreSQLParserListener) EnterFloat_(ctx *Float_Context) {}
 

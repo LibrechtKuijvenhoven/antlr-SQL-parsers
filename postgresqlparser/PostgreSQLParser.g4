@@ -3345,6 +3345,8 @@ simpletypename
     | constdatetime
     | constinterval (interval_? | OPEN_PAREN iconst CLOSE_PAREN)
     | jsonType
+    | money
+    | id
     ;
 
 consttypename
@@ -3361,7 +3363,6 @@ generictype
 
 type_modifiers_
     : OPEN_PAREN expr_list CLOSE_PAREN
-    
     ;
 
 numeric
@@ -3376,19 +3377,28 @@ numeric
     | DEC type_modifiers_?
     | NUMERIC type_modifiers_?
     | BOOLEAN_P
+    | SMALLSERIAL
+    | SERIAL
+    | BIGSERIAL
+    ;
+
+money 
+    : MONEY
+    ;
+id
+    : UUID
     ;
 
 float_
     : OPEN_PAREN iconst CLOSE_PAREN
-    
     ;
 
 //todo: merge alts
 
 bit
-    : bitwithlength
-    | bitwithoutlength
+    : BIT varying_? (OPEN_PAREN iconst CLOSE_PAREN)?
     ;
+
 
 constbit
     : bitwithlength
@@ -3404,7 +3414,8 @@ bitwithoutlength
     ;
 
 character
-    : character_c (OPEN_PAREN iconst CLOSE_PAREN)?
+    : TEXT_P
+    | character_c (OPEN_PAREN iconst CLOSE_PAREN)?
     ;
 
 constcharacter
@@ -3419,7 +3430,6 @@ character_c
 
 varying_
     : VARYING
-    
     ;
 
 constdatetime
@@ -4850,6 +4860,11 @@ col_name_keyword
     | XMLROOT
     | XMLSERIALIZE
     | XMLTABLE
+    | SMALLSERIAL
+    | SERIAL
+    | BIGSERIAL
+    | MONEY
+    | UUID 
     ;
 
 /* Type/function identifier --- keywords that can be type or function names.

@@ -1702,6 +1702,12 @@ type PostgreSQLParserListener interface {
 	// EnterNumeric is called when entering the numeric production.
 	EnterNumeric(c *NumericContext)
 
+	// EnterMoney is called when entering the money production.
+	EnterMoney(c *MoneyContext)
+
+	// EnterId is called when entering the id production.
+	EnterId(c *IdContext)
+
 	// EnterFloat_ is called when entering the float_ production.
 	EnterFloat_(c *Float_Context)
 
@@ -3870,6 +3876,12 @@ type PostgreSQLParserListener interface {
 
 	// ExitNumeric is called when exiting the numeric production.
 	ExitNumeric(c *NumericContext)
+
+	// ExitMoney is called when exiting the money production.
+	ExitMoney(c *MoneyContext)
+
+	// ExitId is called when exiting the id production.
+	ExitId(c *IdContext)
 
 	// ExitFloat_ is called when exiting the float_ production.
 	ExitFloat_(c *Float_Context)
